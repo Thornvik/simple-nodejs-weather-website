@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.error) {
       callback('unable to get weather, check location', undefined)
     } else {
-      callback(undefined, 'the current temprature is ' + body.current.temperature)
+      callback(undefined, 'The current temprature is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + '. is it day? ' + body.current.is_day)
     }
   })
 }
